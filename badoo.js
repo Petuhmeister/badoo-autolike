@@ -91,8 +91,8 @@ window.bot = {
 			xhr.open('POST', url, true);
 			xhr.setRequestHeader('Content-Type', 'json');
 
-			xhr.setRequestHeader('X-Session-id', B.Session.getSessionId());
-			xhr.setRequestHeader('X-User-id', B.Session.getUserId());
+			xhr.setRequestHeader('X-Session-id', $vars.Apification.session_id);
+ 			xhr.setRequestHeader('X-User-id', $vars.Apification.user_id);
 
 			xhr.onreadystatechange = (function() {
 				if (xhr.readyState == XMLHttpRequest.DONE) {
